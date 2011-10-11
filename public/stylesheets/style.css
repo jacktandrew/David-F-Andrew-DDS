@@ -4,7 +4,7 @@ body {
   font-family: Verdana, Arial, sans serif;
   font-size: 11px;
   margin: 2px;
-  background: #ffffff url('images/blue2white.jpg') repeat-x;
+  background: #ffffff url('/images/blue2white.jpg') repeat-x;
   }
 
 #wrapper {

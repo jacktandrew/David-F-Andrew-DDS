@@ -1,0 +1,94 @@
+  <div id="contact">
+    <h1 id="name">David F. Andrew, DDS</h1>
+    <h1 id="phone">253-752-2447</h1>
+    <h3>2302 S Union Ave</h3>
+    <h3>Building B, Suite 12</h3>
+    <h3>Tacoma, WA 98405</h3>
+    <h4>(Across from Target on Union Ave)</h4>
+  </div>
+
+  <img src="images/with_asst.jpg" id="with_asst" />
+
+  <div id="blurb">
+    <img src="images/no_asst.jpg" id="no_asst" />
+    <p>David F. Andrew of Tacoma, WA offers gentle dental care for the entire family. Since 1975, we have been giving our patients healthy and lasting smiles. Family owned and operated, our dental clinic welcomes new patients and children every day.  Dr. David F Andrew received his degree from the University of Washington. He is also a proud member of the American Dental Association, the Washington State Dental Association, and the Pierce County Dental Association.
+    </p>
+  </div>
+
+  <div id="info">
+    <div id="proc">
+      <h3>Dental Care Services Include:</h3>
+      <ul>
+        <li>Preventative Dentistry</li>
+        <li>Cleanings</li>
+        <li>Fillings</li>
+        <li>Natural-Looking Crowns &amp; Bridges</li>
+        <li>Cosmetic Dentistry</li>
+        <li>Implant Restorative Dentistry</li>
+        <li>Oral Surgery</li>
+        <li>Root Canals</li>
+        <li>Dentures</li>
+      </ul>
+    </div> <!-- end of about -->
+
+    <div id="about">
+      <h3>New Patients Welcome</h3>
+        <ul>
+          <li>Caring, Friendly &amp; Professional</li>
+          <li>Soothing Nitrous Oxide</li>
+          <li>Most Insurance Plans Accepted</li>
+        </ul>
+        <img src="images/visa.gif" id="visa" />
+    </div>
+  </div> <!-- end of info -->
+
+  <div id="route_finder">
+    <h2>Get directions to the office</h2>
+    <br/>
+
+  <form action="#" onsubmit="setDirections(this.from.value, this.to.value, this.locale.value); return false">
+
+    <table>
+      <tr>
+        <th align="right">From:&nbsp;</th>
+      
+        <td>
+          <input type="text" size="35" id="fromAddress" name="from" 
+          onFocus="this.value=''" value="Starting Point"/>
+        </td>
+      
+        <th align="right">&nbsp;&nbsp;To:&nbsp;</th>
+      
+        <td align="right">
+          <input type="text" size="50" id="toAddress" name="to" 
+          value="David F. Andrew, DDS - 2302 S Union #12 Tacoma, WA" />
+        </td>
+      
+        <td>
+          <input name="submit" type="submit" value="Get Directions!"  size="45"/>
+        </td>
+
+        <td class="hidden">Language:&nbsp;</td>
+
+        <td class="hidden">
+          <select id="locale" name="locale">
+      
+            <option value="en" selected>English</option>
+            <!-- <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option> -->
+          </select>  
+        </td>
+      </tr>
+    </table>
+  </form>
+  <br/>
+  <table class="directions">
+    <tr><th>Formatted Directions</th><th>Map</th></tr>
+    <tr>
+      <td valign="top"><div id="directions" style="width: 275px"></div></td>
+      <td valign="top"><div id="map_canvas" style="width: 510px; height: 400px"></div></td>
+    </tr>
+  </table>
+</div> <!-- end of wrapper -->
