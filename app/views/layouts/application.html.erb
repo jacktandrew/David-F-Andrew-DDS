@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  
   <title>David F Andrew DDS</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :defaults, 'map.js' %>
   <%= csrf_meta_tag %>
 
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAgPItHylDTanR4p27lAlFSRRxQ8V4Mrxf3wLlJhtz-mOgNWVRiRSa_yylcA2kC_Sl1URB4r1CBvKWJQ" type="text/javascript"></script>
 </head>
 
-<body onload="initialize()" onunload="GUnload()">
-  <div id="wrapper">
+<body onload="initialize()">
+  <div id="wrapper" class="group">
     <img src="images/banner.jpg" id="banner" />
 
     <%= yield %>

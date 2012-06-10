@@ -42,53 +42,28 @@
     </div>
   </div> <!-- end of info -->
 
-  <div id="route_finder">
-    <h2>Get directions to the office</h2>
-    <br/>
+  <section class="group">
+    <div id="input_wrapper">
+      <h2>Get directions to the office</h2>
+      <input type="text" size="35" id="start" onFocus="this.value=''" value="Starting Point"/>
+      <input type="text" size="50" id="end" value="David F. Andrew, DDS - 2302 S Union #12 Tacoma, WA" />
+      <b>Mode of Travel: </b>
+      <select id="mode" onchange="calcRoute();">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+      </select>
+      <button id="get_directions">Get Directions</button>
+    </div>
+  
+    <div id="directions_wrapper" class="group">
+      <b>Formatted Directions</b>
+      <div id="directions-panel" style="width: 275px"></div>
+    </div>
 
-  <form action="#" onsubmit="setDirections(this.from.value, this.to.value, this.locale.value); return false">
-
-    <table>
-      <tr>
-        <th align="right">From:&nbsp;</th>
-      
-        <td>
-          <input type="text" size="35" id="fromAddress" name="from" 
-          onFocus="this.value=''" value="Starting Point"/>
-        </td>
-      
-        <th align="right">&nbsp;&nbsp;To:&nbsp;</th>
-      
-        <td align="right">
-          <input type="text" size="50" id="toAddress" name="to" 
-          value="David F. Andrew, DDS - 2302 S Union #12 Tacoma, WA" />
-        </td>
-      
-        <td>
-          <input name="submit" type="submit" value="Get Directions!"  size="45"/>
-        </td>
-
-        <td class="hidden">Language:&nbsp;</td>
-
-        <td class="hidden">
-          <select id="locale" name="locale">
-      
-            <option value="en" selected>English</option>
-            <!-- <option value="fr">French</option>
-            <option value="de">German</option>
-            <option value="ja">Japanese</option>
-            <option value="es">Spanish</option> -->
-          </select>  
-        </td>
-      </tr>
-    </table>
-  </form>
-  <br/>
-  <table class="directions">
-    <tr><th>Formatted Directions</th><th>Map</th></tr>
-    <tr>
-      <td valign="top"><div id="directions" style="width: 275px"></div></td>
-      <td valign="top"><div id="map_canvas" style="width: 510px; height: 400px"></div></td>
-    </tr>
-  </table>
+    <div id="map_wrapper">
+      <b>Map</b>
+      <div id="map_canvas" style="width: 510px; height: 400px">
+    </div>
+  </section>
 </div> <!-- end of wrapper -->
