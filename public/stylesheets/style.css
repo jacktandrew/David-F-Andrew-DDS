@@ -24,12 +24,13 @@ body {
   background-color:#EEEEEE;
   display: inline-block;
   width: 100%;
-  margin: 10px;
+  margin: 10px 0;
+  text-align: center;
   }
 
 #map_wrapper, #directions_wrapper {
   float: left;
-  margin: 1px;
+  margin: 3px;
 }
 
 img {color: #000000;}
